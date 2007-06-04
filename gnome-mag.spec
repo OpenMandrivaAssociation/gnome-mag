@@ -3,7 +3,7 @@
 
 Summary: GNOME magnifier
 Name: gnome-mag
-Version: 0.14.4
+Version: 0.14.5
 Release: %mkrel 1
 License: GPL
 Group: Accessibility
