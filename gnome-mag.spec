@@ -3,8 +3,8 @@
 
 Summary: GNOME magnifier
 Name: gnome-mag
-Version: 0.14.5
-Release: %mkrel 2
+Version: 0.14.6
+Release: %mkrel 1
 License: GPL
 Group: Accessibility
 URL: http://developer.gnome.org/projects/gap/
@@ -50,11 +50,13 @@ Development libraries and , include files for GNOME magnifier.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT installed-docs
 
 %makeinstall_std
 
 %find_lang %{name}
+
+mv %buildroot%_datadir/doc/gnome-mag-* installed-docs
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -82,5 +84,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*
 %{_includedir}/*
-
 
