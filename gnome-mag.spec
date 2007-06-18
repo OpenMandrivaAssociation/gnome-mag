@@ -80,6 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n %{lib_name}-devel
 %defattr(-,root,root,-)
+%doc installed-docs/*
 %attr(644,root,root) %{_libdir}/*.la
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*
