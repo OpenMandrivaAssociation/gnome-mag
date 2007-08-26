@@ -1,9 +1,10 @@
 %define lib_major 2
-%define lib_name  %mklibname %{name} %{lib_major}
+%define libname  %mklibname %{name} %{lib_major}
+%define libnamedev  %mklibname -d %{name}
 
 Summary: GNOME magnifier
 Name: gnome-mag
-Version: 0.14.6
+Version: 0.14.7
 Release: %mkrel 1
 License: GPL
 Group: Accessibility
@@ -18,26 +19,27 @@ BuildRequires: perl-XML-Parser
 %description
 GNOME Magnifier
 
-%package -n %{lib_name}
+%package -n %{libname}
 Summary:	GNOME magnifier shared library
 Group:		%{group}
 
 Provides:	lib%{name} = %{version}-%{release}
 Requires:	%{name} >= %{version}-%{release}
 
-%description -n %{lib_name}
+%description -n %{libname}
 GNOME Magnifier shared library.
 
-%package -n %{lib_name}-devel
+%package -n %{libnamedev}
 Summary:	Static libraries, include files for gnome-mag
 Group:		Development/GNOME and GTK+
 Provides:	%{name}-devel = %{version}-%{release}
 Provides:	lib%{name}-devel = %{version}-%{release}
-Requires:	%{lib_name} = %{version}-%{release}
+Requires:	%{libname} = %{version}-%{release}
 Requires:   libbonobo2_x-devel
 Requires:	gtk+2-devel
+Obsoletes: %mklibname -d %{name} %{lib_major}
 
-%description -n %{lib_name}-devel
+%description -n %{libnamedev}
 Development libraries and , include files for GNOME magnifier.
 
 %prep
@@ -61,8 +63,8 @@ mv %buildroot%_datadir/doc/gnome-mag-* installed-docs
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig -n %{lib_name}
-%postun -p /sbin/ldconfig -n %{lib_name}
+%post -p /sbin/ldconfig -n %{libname}
+%postun -p /sbin/ldconfig -n %{libname}
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
@@ -74,11 +76,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/idl/*
 %_mandir/man1/magnifier.1*
 
-%files -n %{lib_name}
+%files -n %{libname}
 %defattr(-,root,root,-)
 %{_libdir}/libgnome-mag.so.%{lib_major}*
 
-%files -n %{lib_name}-devel
+%files -n %{libnamedev}
 %defattr(-,root,root,-)
 %doc installed-docs/*
 %attr(644,root,root) %{_libdir}/*.la
