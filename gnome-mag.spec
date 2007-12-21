@@ -10,6 +10,7 @@ License: GPL
 Group: Accessibility
 URL: http://developer.gnome.org/projects/gap/
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: at-spi-devel >= 1.6.0
 BuildRequires: libxdamage-devel
 BuildRequires: libxcomposite-devel
