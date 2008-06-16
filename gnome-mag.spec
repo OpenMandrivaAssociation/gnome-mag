@@ -5,7 +5,7 @@
 Summary: GNOME magnifier
 Name: gnome-mag
 Version: 0.15.0
-Release: %mkrel 2
+Release: %mkrel 3
 License: GPL
 Group: Accessibility
 URL: http://developer.gnome.org/projects/gap/
