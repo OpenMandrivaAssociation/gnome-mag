@@ -4,7 +4,7 @@
 
 Summary: GNOME magnifier
 Name: gnome-mag
-Version: 0.15.3
+Version: 0.15.4
 Release: %mkrel 1
 License: LGPLv2+
 Group: Accessibility
@@ -14,7 +14,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: at-spi-devel >= 1.6.0
 BuildRequires: libxdamage-devel
 BuildRequires: libxcomposite-devel
-BuildRequires: perl-XML-Parser
+BuildRequires: intltool
 
 %description
 GNOME Magnifier
