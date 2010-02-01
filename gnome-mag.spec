@@ -4,7 +4,7 @@
 
 Summary: GNOME magnifier
 Name: gnome-mag
-Version: 0.15.9
+Version: 0.16.0
 Release: %mkrel 1
 License: LGPLv2+
 Group: Accessibility
@@ -12,6 +12,7 @@ URL: http://developer.gnome.org/projects/gap/
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: at-spi-devel >= 1.6.0
+BuildRequires: dbus-glib-devel
 BuildRequires: libxdamage-devel
 BuildRequires: libxcomposite-devel
 BuildRequires: intltool
@@ -77,6 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/bonobo/servers/*
 %{_libdir}/orbit-2.0/*
 %{_datadir}/gnome-mag
+%_datadir/dbus-1/services/org.freedesktop.gnome.Magnifier.service
 %{_datadir}/idl/*
 %_mandir/man1/magnifier.1*
 
