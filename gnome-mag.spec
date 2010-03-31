@@ -15,6 +15,7 @@ BuildRequires: at-spi-devel >= 1.6.0
 BuildRequires: dbus-glib-devel
 BuildRequires: libxdamage-devel
 BuildRequires: libxcomposite-devel
+BuildRequires: popt-devel
 BuildRequires: intltool
 
 %description
