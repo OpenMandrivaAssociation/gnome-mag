@@ -17,6 +17,8 @@ BuildRequires: libxdamage-devel
 BuildRequires: libxcomposite-devel
 BuildRequires: popt-devel
 BuildRequires: intltool
+#gw libtool dep:
+BuildRequires: libGConf2-devel
 
 %description
 GNOME Magnifier
