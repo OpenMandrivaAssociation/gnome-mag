@@ -56,7 +56,7 @@ Development libraries and , include files for GNOME magnifier.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT installed-docs
+rm -rf %{buildroot} installed-docs
 
 %makeinstall_std
 
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT installed-docs
 mv %buildroot%_datadir/doc/gnome-mag-* installed-docs
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %if %mdkversion < 200900
 %post -p /sbin/ldconfig -n %{libname}
