@@ -7,7 +7,7 @@
 Summary:	GNOME magnifier
 Name:		gnome-mag
 Version:	0.16.3
-Release:	3
+Release:	4
 License:	LGPLv2+
 Group:		Accessibility
 Url:		http://developer.gnome.org/projects/gap/
@@ -19,7 +19,7 @@ BuildRequires: pkgconfig(gconf-2.0)
 BuildRequires: pkgconfig(gdk-pixbuf-2.0)
 BuildRequires: pkgconfig(gtk+-2.0)
 BuildRequires: pkgconfig(libspi-1.0)
-BuildRequires: pkgconfgi(popt)
+BuildRequires: pkgconfig(popt)
 BuildRequires: pkgconfig(xcomposite)
 BuildRequires: pkgconfig(xdamage)
 BuildRequires: pkgconfig(xext)
